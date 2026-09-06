@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1><font color=""face="Arial">Gestion d'hotel <hr width="50%"</font></h1><br><br>
+    
+        <h4>Liste des chambres</h4>
+           <section> 
+
+        <div class="chambres">
+            <div class="carte">
+                 <h3>Chambre 101</h3>
+                 <p>Simple</p>  
+                 <p>Prix:105d</p>  
+
+                 <label for="dateresvation">Date de Réservation</label><br><br>
+                 <input type="date" id="date101"> <br><br>                                  
+                 <button onclick="verifierreservation('date101','etat101')">Réserver</button>
+                 <p id="etat101">Disponible</p>
+
+            </div>
+
+           
+            
+                <div class="carte">
+                <h3>Chambre 104</h3>
+                <p>Double</p>
+                <p>Prix:205d</p>
+
+                <label for="dateresvation">Date de Réservation</label><br><br>
+                 <input type="date" id="date104"> <br><br>                                  
+                 <button onclick="verifierreservation('date104','etat104')"">Réserver</button>
+                 <p id="etat104">Disponible</p>
+
+                </div>
+            
+            <div class="carte">
+                <h3>Chambre 107</h3>
+                <p>Suite</p>
+                <p>Prix:305d</p>
+                <label for="dateresvation">Date de Réservation</label><br><br>
+                <input type="date" id="date107"> <br><br>                                  
+                <button onclick="verifierreservation('date107','etat107')">Réserver</button>
+                <p id="etat107">Disponible</p> 
+            </div>
+            <div class="carte">
+                <h3>Chambre 102</h3>
+                <p>Simple</p>
+                <p>Prix:105d</p>                          
+                                                
+                
+                <label for="dateresvation">Date de Réservation</label><br><br>
+                <input type="date" id="dateresvation"> <br><br>                                  
+                <button onclick="verifierreservation('date102','etat102')">Réserver</button>
+                <p id="etat102">Disponible</p>
+
+            </div>
+              
+                <div class="carte">
+ 
+                <h3>Chambre 105</h3>
+                <p>Double</p>
+                <p>Prix:205d</p>
+
+                <label for="dateresvation">Date de Réservation</label><br><br>
+                 <input type="date" id="dateresvation"> <br><br>                                  
+                 <button onclick="verifierreservation('date105','etat105')">Réserver</button>
+                 <p id="etat105">Disponible</p>  
+                </div>
+
+            <div class="carte">
+                <h3>Chambre 108</h3>
+                <p>Suite</p>
+                <p>Prix:305d</p>
+                 <label for="dateresvation">Date de Réservation</label><br><br>
+                 <input type="date" id="dateresvation"> <br><br>                                  
+                 <button onclick="verifierreservation('date108','etat108')">Réserver</button>
+                 <p id="etat108">Disponible</p>
+            </div>
+           
+            <div class="carte">
+                <h3>Chambre 103</h3>
+                <p>Simple</p>   
+                <p>Prix:105d</p>                       
+                                                
+                
+                <label for="dateresvation">Date de Réservation</label><br><br>
+                <input type="date" id="date103"> <br><br>                                  
+                <button onclick="verifierreservation('date103','etat103')">Réserver</button>
+                <p id="etat103">Disponible</p> 
+
+            </div>
+              
+                <div class="carte">
+                
+                <h3>Chambre 106</h3>
+                <p>Double</p>
+                <p>Prix:205d</p>
+
+                <label for="dateresvation">Date de Réservation</label><br><br>
+                 <input type="date" id="date106"> <br><br>                                  
+                 <button onclick="verifierreservation('date106','etat106')">Réserver</button>
+                 <p id="etat106">Disponible</p>
+
+                </div>
+
+            <div class="carte">
+                <h3>Chambre 109</h3>
+                <p>Suite</p>
+                <p>Prix:305d</p>
+
+                <label for="dateresvation">Date de Réservation</label><br><br>
+                 <input type="date" id="date109"> <br><br>                                  
+                 <button onclick="verifierreservation('date109','etat109')">Réserver</button>
+                 <p id="etat109">Disponible</p>
+
+            </div>
+              
+        </div>
+
+
+    </section><br><br>
+    
+   <table border="5">
+      <caption><font color="blue" sisz="6" face="Arial">Réservation</font></caption>
+    
+        <tr>
+            <th>Nom du Client</th>
+            <th>Date Arrivée</th>
+            <th>Date Départ</th>
+        </tr>
+   
+
+   
+        <tr>
+            <td id="nomTable"></td>
+            <td id="arriveeTable"></td>
+            <td id="departTable"></td>
+        </tr>
+
+        
+    
+
+
+
+
+</table><br><br><br>
+<form id="formReservation">
+
+    <label for="nomClient">Nom du client :</label> <input type="text" id="nom"  placeholder="Nom client" > <br><br>
+     
+
+
+    <br><br>
+
+    <label for="numeroChambre">Numéro de chambre :</label>
+
+    <select id="chambre" >
+        <option value="">Choisir une chambre</option>
+        <option value="101">101</option>
+        <option value="102">102</option>
+        <option value="103">103</option>
+    </select>
+    <button onchange="allerChambre()">Chercher</button>
+    
+
+
+    <br><br>
+<form>
+    <label for="dateArrivee">Date d'arrivée :</label><input type="date" id="arrivee">
+    
+
+    <br><br>
+
+    <label for="dateDepart">Date de départ :</label> <input type="date" id="depart" >
+
+
+    <br><br>
+
+    <button type="button" onclick="modifierTableau()">Afficher</button>
+
+</form>
+
+<script>
+ function verifierreservation(idDate,idEtat){
+    let dateChoisie= document.getElementById(idDate).value;
+    let aujourdHui=new Date().toISOString().split("T")[0];
+    if(dateChoisie == aujourdHui){
+        document.getElementById(idEtat).innerHTML="Occupée";
+        
+    }else{
+       document.getElementById(idEtat).innerHTML="Disponible";
+    }
+ } 
+ function allerChambre(){
+    let numero=document.getElementById("numeroChambre").value;
+    document.getElementById(numero).scrollIntoView({
+        behavior:"smooth"
+    });
+ }
+
+
+ function modifierTableau(){
+    
+    document.getElementById("nomTable").textContent=
+    document.getElementById("nom").value;
+    document.getElementById("arriveeTable").textContent=
+    document.getElementById("arrivee").value;
+    document.getElementById("departTable").textContent=
+    document.getElementById("depart").value;
+    
+ }
+
+ 
+ 
+</script>
+</body>
+</html>
